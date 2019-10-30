@@ -3,13 +3,13 @@ var degToRad = Math.PI / 180;
 
 function evaluatePixel(samples) {
   var sample = samples[0];
-  var b03_norm = normalize(sample.B03, 0, 0.253061520471542);
-  var b04_norm = normalize(sample.B04, 0, 0.290393577911328);
-  var b05_norm = normalize(sample.B05, 0, 0.305398915248555);
-  var b06_norm = normalize(sample.B06, 0.006637972542253, 0.608900395797889);
-  var b07_norm = normalize(sample.B07, 0.013972727018939, 0.753827384322927);
-  var b8a_norm = normalize(sample.B8A, 0.026690138082061, 0.782011770669178);
-  var b11_norm = normalize(sample.B11, 0.016388074192258, 0.493761397883092);
+  var b03_norm = sample.B03//normalize(sample.B03, 0, 0.253061520471542);
+  var b04_norm = sample.B04//normalize(sample.B04, 0, 0.290393577911328);
+  var b05_norm = sample.B05//normalize(sample.B05, 0, 0.305398915248555);
+  var b06_norm = sample.B06//normalize(sample.B06, 0.006637972542253, 0.608900395797889);
+  var b07_norm = sample.B07//normalize(sample.B07, 0.013972727018939, 0.753827384322927);
+  var b8a_norm = sample.B08A//normalize(sample.B8A, 0.026690138082061, 0.782011770669178);
+  var b11_norm = sample.B11//normalize(sample.B11, 0.016388074192258, 0.493761397883092);
   var b12_norm = normalize(sample.B12, 0, 0.493025984460231);
   var viewZen_norm = normalize(Math.cos(sample.viewZenithMean * degToRad), 0.918595400582046, 1);
   var sunZen_norm  = normalize(Math.cos(sample.sunZenithAngles * degToRad), 0.342022871159208, 0.936206429175402);
